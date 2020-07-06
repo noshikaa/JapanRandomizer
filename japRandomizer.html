@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Japan Randomizer</title>
+    <link rel="stylesheet" href="noTocar/styles.css">
+  </head>
+  
+  <body>
+    <header class="centered bold unselectable">Generador de palabras Japonesas</header>
+    <div class="body-content">
+      <div class="units-picker-container unselectable">
+        Elige las unidades que quieras repasar.
+        <div id="listaUnidades" />
+      </div>
+      <div class="words-picker-container">
+        <span >Cuantas particulas usar?</span>
+        <select class="number-picker" name="nroParticulas" id="nroParticulas">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+      <div class="words-picker-container">
+        <span >Cuantas palabras de vocabulario usar?</span>
+        <select class="number-picker" name="nroPalabrasVoc" id="nroPalabrasVoc">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+      <div class="words-picker-container">
+        <span >Cuantos verbos usar?</span>
+        <select class="number-picker" name="nroVerbos" id="nroVerbos">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+      <textarea type="text" class="result-section" id="resultSection">
+      </textarea>
+      <div class="generate-button unselectable" onclick="generate(
+        particulas,
+        verbos,
+        vocabulario,
+        {
+          cantidadParticulas: document.getElementById('nroParticulas').value,
+          cantidadVerbos: document.getElementById('nroVerbos').value,
+          cantidadVocabulario: document.getElementById('nroPalabrasVoc').value
+        })">
+        Generar nueva frase
+      </div>
+    </div>
+    <footer></footer>
+    <script type="text/javascript" src="listaParticulas.js"></script>
+    <script type="text/javascript" src="listaVerbos.js"></script>
+    <script type="text/javascript" src="listaVocabulario.js"></script>
+    <script type="text/javascript" src="listaUnidades.js"></script>
+    <script type="text/javascript" src="noTocar/js.js"></script>
+  </body>
+</html>
